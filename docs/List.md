@@ -44,7 +44,7 @@ export default App;
 
 // in src/posts.js
 import React from 'react';
-import { List, Datagrid, TextField } from 'admin-on-rest/lib/mui';
+import { List, Datagrid, TextField } from 'admin-on-rest';
 
 export const PostList = (props) => (
     <List {...props}>
@@ -60,8 +60,6 @@ export const PostList = (props) => (
 That's enough to display the post list:
 
 ![Simple posts list](./img/simple-post-list.png)
-
-Notice that the `<List>`, `<Datagrid>`, and `<TextField>` components that we use here are from `admin-on-rest/lib/mui` - these are Material UI components.
 
 ### Page Title
 
@@ -264,7 +262,7 @@ It renders as many columns as it receives `<Field>` children.
 ```js
 // in src/posts.js
 import React from 'react';
-import { List, Datagrid, TextField } from 'admin-on-rest/lib/mui';
+import { List, Datagrid, TextField } from 'admin-on-rest';
 
 export const PostList = (props) => (
     <List {...props}>
@@ -355,6 +353,7 @@ Admin-on-rest relies on [material-ui's `<Table>` component](http://www.material-
 
 For instance, to get a fixed header on the table, override the `<Table>` props with `options`:
 
+{% raw %}
 ```js
 export const PostList = (props) => (
     <List {...props}>
@@ -364,9 +363,11 @@ export const PostList = (props) => (
     </List>
 );
 ```
+{% endraw %}
 
 To enable striped rows and row hover, override the `<TableBody>` props with `bodyOptions`:
 
+{% raw %}
 ```js
 export const PostList = (props) => (
     <List {...props}>
@@ -376,6 +377,7 @@ export const PostList = (props) => (
     </List>
 );
 ```
+{% endraw %}
 
 For a list of all the possible props that you can override via these options, please refer to [the material-ui `<Table>` component documentation](http://www.material-ui.com/#/components/table).
 
@@ -386,7 +388,7 @@ For mobile devices, a `<Datagrid>` is often unusable - there is simply not enoug
 ```js
 // in src/posts.js
 import React from 'react';
-import { List, SimpleList } from 'admin-on-rest/lib/mui';
+import { List, SimpleList } from 'admin-on-rest';
 
 export const PostList = (props) => (
     <List {...props}>
@@ -406,7 +408,7 @@ export const PostList = (props) => (
 ```js
 // in src/posts.js
 import React from 'react';
-import { List, Responsive, SimpleList, Datagrid, TextField, ReferenceField, EditButton } from 'admin-on-rest/lib/mui';
+import { List, Responsive, SimpleList, Datagrid, TextField, ReferenceField, EditButton } from 'admin-on-rest';
 
 export const PostList = (props) => (
     <List {...props}>
